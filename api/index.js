@@ -10,7 +10,7 @@ import router from "./routes/authRoute.js";
 app.use(express.json());
 
 // user Route
-app.use("/api", router);
+app.use("/api/auth", router);
 
 // connect MongoDB
 mongoose
