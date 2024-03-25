@@ -1,9 +1,16 @@
 import { Alert, Button, Label, Spinner, TextInput } from "flowbite-react";
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import {
+  signInSuccess,
+  signInFailure,
+  signInStart,
+} from "../Redux/user/userSlice";
 
 const SignUp = () => {
   const [formData, setFormData] = useState("");
+  const dispatch = useDispatch();
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(null);
   const navigate = useNavigate();
